@@ -7,6 +7,7 @@
 
 import scrapy
 
+
 class DouyinItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -22,3 +23,4 @@ class DouyinItem(scrapy.Item):
     comment_count = scrapy.Field()
     share_count = scrapy.Field()
     share_url = scrapy.Field()
+    pass
