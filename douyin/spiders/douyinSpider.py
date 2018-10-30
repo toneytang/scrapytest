@@ -14,8 +14,8 @@ class DouyinspiderSpider(scrapy.Spider):
     #start_urls列表实际是调用start_requests函数来处理每个url的，这里我们重写下自己的start_requests
     def start_requests(self):
 
-        #这是抖音的一个接口，每次请求这个url将会随机返回20条左右的抖音视频信息，count控制返回信息的多少，貌似25就是最大了。我们循环访问这个接口抓取数据
-        url = "https://api.amemv.com/aweme/v1/feed/?device_type=SS88&app_name=aweme&device_id=49572686947"
+        #这是抖音的一个接口，每次请求这个url将会随机返回6条抖音视频信息，count控制返回信息的多少，貌似25就是最大了。我们循环访问这个接口抓取数据
+        url = "https://api.amemv.com/aweme/v1/feed/?count=6&device_type=SS98&app_name=aweme&device_id=65764839281"
 
         #这里循环爬取10次，dont_filter设置为True，表示不过滤重复url。因为我们每次都是请求同一个url，不设置dont_filter默认位False，只能爬取一次
         for i in range(1,10):
